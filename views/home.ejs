@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSP Eat Day!</title>
-    
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <title>MspDay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
 
-    
+
 </head>
-<body>
-    <h1>MSP Eat Day</h1>
-    
-<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoia2FmaS1tdXppbiIsImEiOiJja3JiNjBldngxZzg5Mm9uaWVwZGV3eGdoIn0.dJJFCec4XHnxy9DMA3T8Hg';
-const map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-93.22, 44.95], // starting position [lng, lat]
-    zoom: 9 // starting zoom
-});
-</script>
+
+<body class="bg-secondary">
+    <div class="container-xl mt-5">
+        <h1>Map of Places</h1>
+        <p>I made an entire website for no reason lmao</p>
+        <div id='map' style='width: 100%; height: 500px; border-radius: 5px;'></div>
+    </div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoia2FmaS1tdXppbiIsImEiOiJja3JiNjBldngxZzg5Mm9uaWVwZGV3eGdoIn0.dJJFCec4XHnxy9DMA3T8Hg';
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [-93.22, 44.95], // starting position [lng, lat]
+            zoom: 10 // starting zoom
+        });
+    </script>
+
+    <!--https://stackoverflow.com/questions/62343360/add-text-to-mapbox-marker-->
+    <!--Follow this to add the locations, a few more styles and it's done. A lot
+    Simpler than I thought huh-->
 </body>
+
 </html>

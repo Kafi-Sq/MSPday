@@ -11,7 +11,37 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
 
-
+    <style>
+        .popup {
+            font-size: 15px;
+            color:#e9c46a;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        .popup2 {
+            font-size: 15px;
+            color:#e76f51;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        .popup3 {
+            font-size: 15px;
+            color:#457b9d;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        .popup4 {
+            font-size: 15px;
+            color:#81b29a;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        .name {
+            font-size: 12px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="bg-secondary">
@@ -21,6 +51,8 @@
         <div id='map' style='width: 100%; height: 500px; border-radius: 5px;'></div>
     </div>
 
+
+
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoia2FmaS1tdXppbiIsImEiOiJja3JiNjBldngxZzg5Mm9uaWVwZGV3eGdoIn0.dJJFCec4XHnxy9DMA3T8Hg';
         const map = new mapboxgl.Map({
@@ -29,6 +61,74 @@
             center: [-93.22, 44.95], // starting position [lng, lat]
             zoom: 10 // starting zoom
         });
+        const popup = new mapboxgl.Popup()
+            .setHTML('<p class="popup">Trio Plant Based</p> <p class="name">Hassen</p>')
+            .addTo(map);
+        let marker = new mapboxgl
+            .Marker({color: "#e9c46a"})
+            .setLngLat([-93.287508, 44.948374])
+            .addTo(map)
+            .setPopup(popup);
+
+        const popup2 = new mapboxgl.Popup()
+            .setHTML('<p class="popup">Herbie Butchers"</p> <p class="name">Hassen</p>')
+            .addTo(map);
+        let marker2 = new mapboxgl
+            .Marker({color: "#e9c46a"})
+            .setLngLat([-93.263316, 44.916004])
+            .addTo(map)
+            .setPopup(popup2);
+
+        const popup3 = new mapboxgl.Popup()
+            .setHTML('<p class="popup2">Thirty-Six Cafe"</p> <p class="name">Fartun</p>')
+            .addTo(map);
+        let marker3 = new mapboxgl
+            .Marker({color: "#e76f51"})
+            .setLngLat([-93.140120, 44.939990])
+            .addTo(map)
+            .setPopup(popup3);
+        const popup4 = new mapboxgl.Popup()
+            .setHTML('<p class="popup2">Afandina Cafe"</p> <p class="name">Fartun</p>')
+            .addTo(map);
+        let marker4 = new mapboxgl
+            .Marker({color: "#e76f51"})
+            .setLngLat([-93.262470, 45.041368])
+            .addTo(map)
+            .setPopup(popup4);
+
+        const popup5 = new mapboxgl.Popup()
+            .setHTML('<p class="popup3">MN Nice Cream"</p> <p class="name">Sumaya</p>')
+            .addTo(map);
+        let marker5 = new mapboxgl
+            .Marker({color: "#457b9d"})
+            .setLngLat([-93.251219, 44.999072])
+            .addTo(map)
+            .setPopup(popup5);
+        const popup6 = new mapboxgl.Popup()
+            .setHTML('<p class="popup3">First Draft + Pluckd"</p> <p class="name">Sumaya</p>')
+            .addTo(map);
+        let marker6 = new mapboxgl
+            .Marker({color: "#457b9d"})
+            .setLngLat([-93.277961, 44.985407])
+            .addTo(map)
+            .setPopup(popup6);
+
+        const popup7 = new mapboxgl.Popup()
+            .setHTML('<p class="popup4">Ichiddo Ramen"</p> <p class="name">Abdulahi</p>')
+            .addTo(map);
+        let marker7 = new mapboxgl
+            .Marker({color: "#81b29a"})
+            .setLngLat([-93.277899, 44.953474])
+            .addTo(map)
+            .setPopup(popup7);
+        const popup8 = new mapboxgl.Popup()
+            .setHTML('<p class="popup4">Treats"</p> <p class="name">Abdulahi</p>')
+            .addTo(map);
+        let marker8 = new mapboxgl
+            .Marker({color: "#81b29a"})
+            .setLngLat([-93.132695, 44.939944])
+            .addTo(map)
+            .setPopup(popup8);
     </script>
 
     <!--https://stackoverflow.com/questions/62343360/add-text-to-mapbox-marker-->

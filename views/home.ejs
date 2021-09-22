@@ -12,11 +12,24 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
 
     <style>
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color:white;
+        }
+        .popup a {
+            text-decoration: none;
+            color:#e9c46a;
+        }
         .popup {
             font-size: 15px;
             color:#e9c46a;
             margin-bottom: 0;
             font-weight: bold;
+        }
+        .popup2 a {
+            text-decoration: none;
+            color:#e76f51;
         }
         .popup2 {
             font-size: 15px;
@@ -24,11 +37,19 @@
             margin-bottom: 0;
             font-weight: bold;
         }
+        .popup3 a {
+            text-decoration: none;
+            color:#457b9d;
+        }
         .popup3 {
             font-size: 15px;
             color:#457b9d;
             margin-bottom: 0;
             font-weight: bold;
+        }
+        .popup4 a {
+            text-decoration: none;
+            color:#81b29a;
         }
         .popup4 {
             font-size: 15px;
@@ -48,7 +69,8 @@
     <div class="container-xl mt-5">
         <h1>Map of Places</h1>
         <p>I made an entire website for no reason lmao</p>
-        <div id='map' style='width: 100%; height: 500px; border-radius: 5px;'></div>
+        <div id='map' style='width: 100%; height: 600px; border-radius: 5px;'></div>
+        <a href=""></a>
     </div>
 
 
@@ -57,12 +79,12 @@
         mapboxgl.accessToken = 'pk.eyJ1Ijoia2FmaS1tdXppbiIsImEiOiJja3JiNjBldngxZzg5Mm9uaWVwZGV3eGdoIn0.dJJFCec4XHnxy9DMA3T8Hg';
         const map = new mapboxgl.Map({
             container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            style: 'mapbox://styles/mapbox/dark-v10', // style URL
             center: [-93.22, 44.95], // starting position [lng, lat]
             zoom: 10 // starting zoom
         });
         const popup = new mapboxgl.Popup()
-            .setHTML('<p class="popup">Trio Plant Based</p> <p class="name">Hassen</p>')
+            .setHTML('<p class="popup"><a href="https://www.trioplant-based.com/" target="_blank">Trio Plant Based</a></p> <p class="name">Hassen</p>')
             .addTo(map);
         let marker = new mapboxgl
             .Marker({color: "#e9c46a"})
@@ -71,7 +93,7 @@
             .setPopup(popup);
 
         const popup2 = new mapboxgl.Popup()
-            .setHTML('<p class="popup">Herbie Butchers"</p> <p class="name">Hassen</p>')
+            .setHTML('<p class="popup"><a href="https://herbiebutchersfriedchicken.com/" target="_blank">Herbie Butchers"</a></p> <p class="name">Hassen</p>')
             .addTo(map);
         let marker2 = new mapboxgl
             .Marker({color: "#e9c46a"})
@@ -80,7 +102,7 @@
             .setPopup(popup2);
 
         const popup3 = new mapboxgl.Popup()
-            .setHTML('<p class="popup2">Thirty-Six Cafe"</p> <p class="name">Fartun</p>')
+            .setHTML('<p class="popup2"><a href="https://www.yelp.com/biz/thirty-six-cafe-saint-paul-2/" target="_blank">Thirty-Six Cafe</a></p> <p class="name">Fartun</p>')
             .addTo(map);
         let marker3 = new mapboxgl
             .Marker({color: "#e76f51"})
@@ -88,7 +110,7 @@
             .addTo(map)
             .setPopup(popup3);
         const popup4 = new mapboxgl.Popup()
-            .setHTML('<p class="popup2">Afandina Cafe"</p> <p class="name">Fartun</p>')
+            .setHTML('<p class="popup2"><a href="https://www.catchfood.com/menu-afandina-cafe" target="_blank">Afandina Cafe</a></p> <p class="name">Fartun</p>')
             .addTo(map);
         let marker4 = new mapboxgl
             .Marker({color: "#e76f51"})
@@ -97,7 +119,7 @@
             .setPopup(popup4);
 
         const popup5 = new mapboxgl.Popup()
-            .setHTML('<p class="popup3">MN Nice Cream"</p> <p class="name">Sumaya</p>')
+            .setHTML('<p class="popup3"><a href="https://www.mnnicecream.com/" target="_blank">MN Nice Cream</a></p> <p class="name">Sumaya</p>')
             .addTo(map);
         let marker5 = new mapboxgl
             .Marker({color: "#457b9d"})
@@ -105,7 +127,7 @@
             .addTo(map)
             .setPopup(popup5);
         const popup6 = new mapboxgl.Popup()
-            .setHTML('<p class="popup3">First Draft + Pluckd"</p> <p class="name">Sumaya</p>')
+            .setHTML('<p class="popup3"><a href="https://www.firstdraftmn.com/" target="_blank">First Draft + Pluckd</a></p> <p class="name">Sumaya</p>')
             .addTo(map);
         let marker6 = new mapboxgl
             .Marker({color: "#457b9d"})
@@ -114,7 +136,7 @@
             .setPopup(popup6);
 
         const popup7 = new mapboxgl.Popup()
-            .setHTML('<p class="popup4">Ichiddo Ramen"</p> <p class="name">Abdulahi</p>')
+            .setHTML('<p class="popup4"><a href="https://www.ichiddo.com/" target="_blank">Ichiddo Ramen</a></p> <p class="name">Abdulahi</p>')
             .addTo(map);
         let marker7 = new mapboxgl
             .Marker({color: "#81b29a"})
@@ -122,7 +144,7 @@
             .addTo(map)
             .setPopup(popup7);
         const popup8 = new mapboxgl.Popup()
-            .setHTML('<p class="popup4">Treats"</p> <p class="name">Abdulahi</p>')
+            .setHTML('<p class="popup4"><a href="https://www.treatsmn.com/" target="_blank">Treats</a></p> <p class="name">Abdulahi</p>')
             .addTo(map);
         let marker8 = new mapboxgl
             .Marker({color: "#81b29a"})

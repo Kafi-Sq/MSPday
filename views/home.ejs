@@ -12,54 +12,60 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
 
     <style>
-        body {
-            overflow: hidden;
-        }
         h1 {
             font-size: 40px;
             font-weight: bold;
-            color:white;
+            color: white;
         }
+
         .popup a {
             text-decoration: none;
-            color:#e9c46a;
+            color: #e9c46a;
         }
+
         .popup {
             font-size: 15px;
-            color:#e9c46a;
+            color: #e9c46a;
             margin-bottom: 0;
             font-weight: bold;
         }
+
         .popup2 a {
             text-decoration: none;
-            color:#e76f51;
+            color: #e76f51;
         }
+
         .popup2 {
             font-size: 15px;
-            color:#e76f51;
+            color: #e76f51;
             margin-bottom: 0;
             font-weight: bold;
         }
+
         .popup3 a {
             text-decoration: none;
-            color:#457b9d;
+            color: #457b9d;
         }
+
         .popup3 {
             font-size: 15px;
-            color:#457b9d;
+            color: #457b9d;
             margin-bottom: 0;
             font-weight: bold;
         }
+
         .popup4 a {
             text-decoration: none;
-            color:#81b29a;
+            color: #81b29a;
         }
+
         .popup4 {
             font-size: 15px;
-            color:#81b29a;
+            color: #81b29a;
             margin-bottom: 0;
             font-weight: bold;
         }
+
         .name {
             font-size: 12px;
             margin-bottom: 0;
@@ -72,8 +78,71 @@
     <div class="container-xl mt-5">
         <h1>Map of Places</h1>
         <p>I made an entire website for no reason lmao</p>
-        <div id='map' style='width: 100%; height: 500px; border-radius: 5px;'></div>
+        <div id='map' style='width: 100%; height: 700px; border-radius: 5px;'></div>
         <a href=""></a>
+        <div>
+            <h1>Plan</h1>
+            <div class="d-flex flex-column">
+                <div class="card mb-3" style="width: 18rem; background-color: #e76f51;">
+                    <div class="card-body">
+                        <h5 class="card-title">Afadina Cafe</h5>
+                        <p class="card-text">Fartun</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 18rem; background-color: #457b9d;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pluck'd</h5>
+                        <p class="card-text">Sumaya</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 18rem; background-color: #457b9d;">
+                    <div class="card-body">
+                        <h5 class="card-title">MN Nice Cream</h5>
+                        <p class="card-text">Sumaya</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Sculture Garden</h5>
+                        <p class="card-text">Extra Activity</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 18rem; background-color: #81b29a;">
+                    <div class="card-body">
+                        <h5 class="card-title">Ramen</h5>
+                        <p class="card-text">Abdullahi</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 18rem; background-color: #e9c46a;">
+                    <div class="card-body">
+                        <h5 class="card-title">Trio</h5>
+                        <p class="card-text">Hassen</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 18rem; background-color: #e9c46a;">
+                    <div class="card-body">
+                        <h5 class="card-title">Butchers</h5>
+                        <p class="card-text">Hassen</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 18rem; background-color: #81b29a;">
+                    <div class="card-body">
+                        <h5 class="card-title">Treats</h5>
+                        <p class="card-text">Abdullahi</p>
+                        <a href="#" class="btn btn-primary">Link</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 
@@ -90,7 +159,7 @@
             .setHTML('<p class="popup"><a href="https://www.trioplant-based.com/" target="_blank">Trio Plant Based</a></p> <p class="name">Hassen</p>')
             .addTo(map);
         let marker = new mapboxgl
-            .Marker({color: "#e9c46a"})
+            .Marker({ color: "#e9c46a" })
             .setLngLat([-93.287508, 44.948374])
             .addTo(map)
             .setPopup(popup);
@@ -99,7 +168,7 @@
             .setHTML('<p class="popup"><a href="https://herbiebutchersfriedchicken.com/" target="_blank">Herbie Butchers"</a></p> <p class="name">Hassen</p>')
             .addTo(map);
         let marker2 = new mapboxgl
-            .Marker({color: "#e9c46a"})
+            .Marker({ color: "#e9c46a" })
             .setLngLat([-93.263316, 44.916004])
             .addTo(map)
             .setPopup(popup2);
@@ -108,7 +177,7 @@
             .setHTML('<p class="popup2"><a href="https://www.yelp.com/biz/thirty-six-cafe-saint-paul-2/" target="_blank">Thirty-Six Cafe</a></p> <p class="name">Fartun</p>')
             .addTo(map);
         let marker3 = new mapboxgl
-            .Marker({color: "#e76f51"})
+            .Marker({ color: "#e76f51" })
             .setLngLat([-93.140120, 44.939990])
             .addTo(map)
             .setPopup(popup3);
@@ -116,7 +185,7 @@
             .setHTML('<p class="popup2"><a href="https://www.catchfood.com/menu-afandina-cafe" target="_blank">Afandina Cafe</a></p> <p class="name">Fartun</p>')
             .addTo(map);
         let marker4 = new mapboxgl
-            .Marker({color: "#e76f51"})
+            .Marker({ color: "#e76f51" })
             .setLngLat([-93.262470, 45.041368])
             .addTo(map)
             .setPopup(popup4);
@@ -125,7 +194,7 @@
             .setHTML('<p class="popup3"><a href="https://www.mnnicecream.com/" target="_blank">MN Nice Cream</a></p> <p class="name">Sumaya</p>')
             .addTo(map);
         let marker5 = new mapboxgl
-            .Marker({color: "#457b9d"})
+            .Marker({ color: "#457b9d" })
             .setLngLat([-93.251219, 44.999072])
             .addTo(map)
             .setPopup(popup5);
@@ -133,7 +202,7 @@
             .setHTML('<p class="popup3"><a href="https://www.firstdraftmn.com/" target="_blank">First Draft + Pluckd</a></p> <p class="name">Sumaya</p>')
             .addTo(map);
         let marker6 = new mapboxgl
-            .Marker({color: "#457b9d"})
+            .Marker({ color: "#457b9d" })
             .setLngLat([-93.277961, 44.985407])
             .addTo(map)
             .setPopup(popup6);
@@ -142,7 +211,7 @@
             .setHTML('<p class="popup4"><a href="https://www.ichiddo.com/" target="_blank">Ichiddo Ramen</a></p> <p class="name">Abdulahi</p>')
             .addTo(map);
         let marker7 = new mapboxgl
-            .Marker({color: "#81b29a"})
+            .Marker({ color: "#81b29a" })
             .setLngLat([-93.277899, 44.953474])
             .addTo(map)
             .setPopup(popup7);
@@ -150,7 +219,7 @@
             .setHTML('<p class="popup4"><a href="https://www.treatsmn.com/" target="_blank">Treats</a></p> <p class="name">Abdulahi</p>')
             .addTo(map);
         let marker8 = new mapboxgl
-            .Marker({color: "#81b29a"})
+            .Marker({ color: "#81b29a" })
             .setLngLat([-93.132695, 44.939944])
             .addTo(map)
             .setPopup(popup8);
